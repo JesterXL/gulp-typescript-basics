@@ -1,0 +1,28 @@
+{
+  "name": "gulp-typescript-basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jesse Warden <jesse@jessewarden.com> (https://jessewarden.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.0.1",
+    "browserify": "^9.0.3",
+    "browserify-typescript": "0.0.1",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^4.0.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.5.2",
+    "gulp-typescript": "^2.4.2",
+    "tsify": "^0.8.1",
+    "typescript": "^1.4.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-paths": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
