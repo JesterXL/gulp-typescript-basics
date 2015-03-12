@@ -1,5 +1,5 @@
-import PersonModule = require('./Person');
-export class Gladiator extends PersonModule.Person
+/// <reference path="Person.ts" />
+class Gladiator extends Person
 {
 	attack()
 	{

@@ -1,4 +1,4 @@
-export class Person
+class Person
 {
 	firstName = "Cow";
 	
