@@ -7,7 +7,7 @@ var concat 		= require('gulp-concat');
 var tsify		= require('tsify');
 var browserify	= require('browserify');
 var source 		= require('vinyl-source-stream');
-var buffer = require('vinyl-buffer');
+var buffer 		= require('vinyl-buffer');
 
 gulp.task('hello', function()
 {
@@ -38,14 +38,6 @@ gulp.task('watchFiles', function()
 
 gulp.task('typescriptIt', function()
 {
-	// return gulp.src(['src/**/*.ts'])
-	// 	.pipe(typescript({
-	// 		module: 'commonjs'
-	// 	}))
-	// 	.pipe(concat('App.js'))
-	// 	.pipe(gulp.dest('./build'))
-	// 	.pipe(browserSync.reload({stream: true}));
-
 	browserify('./src/App.ts')
 	    .plugin(tsify)
 	    .bundle()
@@ -62,4 +54,4 @@ gulp.task('clean', function()
 });
 
 
-gulp.task('default', ['clean', 'copyIndex', 'browserSync', 'watchFiles']);
+gulp.task('default', ['clean', 'copyIndex', 'typescriptIt', 'browserSync', 'watchFiles']);
