@@ -51,4 +51,4 @@ gulp.task('clean', function()
 });
 
 
-gulp.task('default', ['clean', 'copyIndex', 'browserSync', 'watchFiles']);
+gulp.task('default', ['clean', 'copyIndex', 'typescriptIt', 'browserSync', 'watchFiles']);
