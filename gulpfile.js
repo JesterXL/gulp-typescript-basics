@@ -4,6 +4,10 @@ var del 		= require('del');
 var vinylPaths  = require('vinyl-paths');
 var typescript 	= require('gulp-typescript');
 var concat 		= require('gulp-concat');
+var browserify 	= require('browserify');
+var tsify 		= require('tsify');
+var source 		= require('vinyl-source-stream');
+var buffer 		= require('vinyl-buffer');
 
 gulp.task('hello', function()
 {
@@ -34,14 +38,12 @@ gulp.task('watchFiles', function()
 
 gulp.task('typescriptIt', function()
 {
-	return gulp.src(['src/**/*.ts'])
-		.pipe(typescript({
-			module: 'commonjs'
-		}))
-		.pipe(concat('App.js'))
-		.pipe(gulp.dest('./build'))
-		.pipe(browserSync.reload({stream: true}));
-	
+	browserify('./src/App.ts')
+		.plugin(tsify)
+		.bundle()
+		.pipe(source('App.js'))
+		.pipe(buffer())
+		.pipe(gulp.dest('./build'));
 });
 
 gulp.task('clean', function()

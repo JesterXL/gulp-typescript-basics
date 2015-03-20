@@ -1,4 +1,4 @@
-/// <reference path="Person.ts" />
+import Person = require('./Person');
 class Gladiator extends Person
 {
 	attack()
@@ -7,3 +7,4 @@ class Gladiator extends Person
 		console.log("... and Gladiator attack!!");
 	}
 }
+export = Gladiator;

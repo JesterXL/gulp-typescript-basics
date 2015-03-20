@@ -8,3 +8,5 @@ class Person
 		this.firstName = "Jesse";
 	}
 }
+
+export = Person;
