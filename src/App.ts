@@ -1,5 +1,5 @@
-import GladiatorModule = require('./Gladiator');
-var dude = new GladiatorModule.Gladiator();
+import Gladiator = require('./Gladiator');
+var dude = new Gladiator();
 console.log("dude:", dude);
 dude.attack();
 

@@ -1,5 +1,5 @@
-import PersonModule = require('./Person');
-export class Gladiator extends PersonModule.Person
+import Person = require('./Person');
+class Gladiator extends Person
 {
 	attack()
 	{
@@ -7,3 +7,4 @@ export class Gladiator extends PersonModule.Person
 		console.log("... and Gladiator attack!!");
 	}
 }
+export = Gladiator;

@@ -4,8 +4,8 @@ var del 		= require('del');
 var vinylPaths  = require('vinyl-paths');
 var typescript 	= require('gulp-typescript');
 var concat 		= require('gulp-concat');
-var tsify		= require('tsify');
-var browserify	= require('browserify');
+var browserify 	= require('browserify');
+var tsify 		= require('tsify');
 var source 		= require('vinyl-source-stream');
 var buffer 		= require('vinyl-buffer');
 
@@ -39,12 +39,11 @@ gulp.task('watchFiles', function()
 gulp.task('typescriptIt', function()
 {
 	browserify('./src/App.ts')
-	    .plugin(tsify)
-	    .bundle()
-	    .pipe(source('App.js'))
-	    .pipe(buffer())
-	    .pipe(gulp.dest('./build'));
-	
+		.plugin(tsify)
+		.bundle()
+		.pipe(source('App.js'))
+		.pipe(buffer())
+		.pipe(gulp.dest('./build'));
 });
 
 gulp.task('clean', function()
